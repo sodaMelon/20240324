@@ -1,4 +1,5 @@
-package com.board.toy.domain.board;
+package com.board.toy.domain.categoryboardmapping;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,14 +9,11 @@ import lombok.Getter;
 
 @Entity
 @Getter
-public class Board {
+public class CategoryBoardMapping {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long categoryId;
 
-    private String name;
-    private String memo;
-    private Boolean del;
-
-    private Boolean anonymous;
+    private Long boardId;
 }
